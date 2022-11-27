@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
+// ignore_for_file: camel_case_types
 
-import './products_overview_screen.dart';
+import 'package:flutter/material.dart';
 
 class productDesc extends StatelessWidget {
   const productDesc({super.key});
@@ -10,7 +10,7 @@ class productDesc extends StatelessWidget {
   Widget build(BuildContext context) {
     String Prodcutid = ModalRoute.of(context)?.settings.arguments as String;
     return Scaffold(
-      appBar: AppBar(title: Text()),
+      appBar: AppBar(title: const Text("descritionp")),
     );
   }
 }

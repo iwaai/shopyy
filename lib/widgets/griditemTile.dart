@@ -1,7 +1,7 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
-import 'package:shopyy/screens/productDesc.dart';
-import '../screens/products_overview_screen.dart';
-import '../screens/products_overview_screen.dart';
+import '../screens/productDesc.dart';
 
 class griditemTile extends StatelessWidget {
   final String id;
