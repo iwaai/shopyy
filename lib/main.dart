@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
           accentColor: Colors.teal,
         ),
         home: const product_overview_screen(),
-        routes: {productDesc.routeName: (context) => productDesc()},
+        routes: {productDesc.routeName: (context) => const productDesc()},
       ),
     );
   }
