@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_final_fields, camel_case_types
 
 import 'package:flutter/material.dart';
-import '../models/product.dart';
+import 'product.dart';
 
 class Product_provider with ChangeNotifier {
   List<Product> _items = [
