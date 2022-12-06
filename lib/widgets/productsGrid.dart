@@ -5,7 +5,7 @@ import '../providers/product.dart';
 import '../widgets/griditemTile.dart';
 
 import 'package:provider/provider.dart';
-//worke with other things as well as thes
+
 
 class productsGrid extends StatelessWidget {
   @override
@@ -20,7 +20,7 @@ class productsGrid extends StatelessWidget {
           create: (ctx) => products[index],
           // ignore: sort_child_properties_last
           child: griditemTile(
-              //products[index].id, products[index].title, products[index].imageUrl),
+              products[index].id, products[index].title, products[index].imageUrl),
               )),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
