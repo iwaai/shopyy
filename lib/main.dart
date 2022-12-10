@@ -19,7 +19,6 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => Product_provider(),
       child: MaterialApp(
-        title: 'Flutter Demo',
         theme: ThemeData(
           primarySwatch: Colors.pink,
           fontFamily: 'Poppins',
