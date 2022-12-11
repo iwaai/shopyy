@@ -7,10 +7,12 @@ import '../widgets/griditemTile.dart';
 import 'package:provider/provider.dart';
 
 class productsGrid extends StatelessWidget {
+  bool showfav;
+  productsGrid(this.showfav, {super.key});
   @override
   Widget build(BuildContext context) {
     final productsData = Provider.of<Product_provider>(context);
-    final products = productsData.items;
+    final products = showfav ? productsData.favitems : productsData.items;
 
     return GridView.builder(
       padding: const EdgeInsets.all(8),
