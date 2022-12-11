@@ -5,8 +5,16 @@ import '../widgets/productsGrid.dart';
 
 enum filterindex { favourites, all }
 
-class product_overview_screen extends StatelessWidget {
+class product_overview_screen extends StatefulWidget {
   const product_overview_screen({super.key});
+
+  @override
+  State<product_overview_screen> createState() =>
+      _product_overview_screenState();
+}
+
+class _product_overview_screenState extends State<product_overview_screen> {
+  bool _setfav = false;
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +24,13 @@ class product_overview_screen extends StatelessWidget {
         actions: [
           PopupMenuButton(
               onSelected: (filterindex getindex) {
-                // ignore: avoid_print
-                print(getindex);
+                setState(() {
+                  if (getindex == filterindex.favourites) {
+                    _setfav = true;
+                  } else {
+                    _setfav = false;
+                  }
+                });
               },
               icon: const Icon(Icons.more_vert),
               itemBuilder: (_) => [
@@ -31,7 +44,7 @@ class product_overview_screen extends StatelessWidget {
                   ])
         ],
       ),
-      body: productsGrid(),
+      body: productsGrid(_setfav),
     );
   }
 }
